@@ -24,5 +24,8 @@
     "bugs": {
         "url": "https://github.com/peterbenoit/tailwindcss-visibility/issues"
     },
-    "homepage": "https://github.com/peterbenoit/tailwindcss-visibility#readme"
+    "homepage": "https://github.com/peterbenoit/tailwindcss-visibility#readme",
+    "devDependencies": {
+        "tailwindcss": "^3.4.17"
+    }
 }
