@@ -36,14 +36,18 @@ const contentVisibilityPlugin = plugin(function ({ matchUtilities, addUtilities,
         return sizes;
     };
 
-    // Default theme values
-    const sizes = validateSizes(
-        theme('sizeHint', {
-            sm: '300px',
-            md: '500px',
-            lg: '800px',
-        })
-    );
+    const defaultSizes = {
+        sm: '300px',
+        md: '500px',
+        lg: '800px',
+    };
+
+    // Get theme values and merge with defaults
+    const themeValues = theme('sizeHint', {});
+    const sizes = validateSizes({
+        ...defaultSizes,
+        ...themeValues,
+    });
 
     // Create utilities using theme values
     addUtilities({
