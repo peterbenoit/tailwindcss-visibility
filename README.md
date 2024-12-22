@@ -119,9 +119,8 @@ Arbitrary values:
 
 ## Demo Pages
 
--   [Basic Examples](#) (Coming Soon)
--   [Performance Comparison](#) (Coming Soon)
--   [Real-world Use Cases](#) (Coming Soon)
+-   [Basic Examples](https://tailwind-css-visibility-demo.vercel.app/)
+
 
 ### Browser Support
 
