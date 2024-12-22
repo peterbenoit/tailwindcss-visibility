@@ -1,0 +1,28 @@
+{
+    "name": "tailwindcss-visibility",
+    "version": "1.0.0",
+    "description": "A lightweight Tailwind CSS plugin that adds utilities for managing content visibility (content-visibility) and intrinsic size hints (contain-intrinsic-size). Designed to improve rendering performance and provide flexible size hints using custom theme values.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/peterbenoit/tailwindcss-visibility.git"
+    },
+    "keywords": [
+        "tailwindcss",
+        "plugin",
+        "content-visibility",
+        "contain-intrinsic-size",
+        "size-hint",
+        "tailwind",
+        "css"
+    ],
+    "author": "Peter Benoit <peterbenoit@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/peterbenoit/tailwindcss-visibility/issues"
+    },
+    "homepage": "https://github.com/peterbenoit/tailwindcss-visibility#readme"
+}
