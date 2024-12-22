@@ -16,8 +16,8 @@ const contentVisibilityPlugin = plugin(function ({ matchUtilities, addUtilities,
     // Arbitrary values, eg [500px]
     matchUtilities({
         'size-hint': (value) => {
-            // Validation for CSS length values
-            if (!/^-?\d*\.?\d+(%|px|rem|em|vh|vw)$/.test(value)) {
+            // Validation for CSS length values, percents not allowed at the time this was created
+            if (!/^-?\d*\.?\d+(px|rem|em|vh|vw)$/.test(value)) {
                 throw new Error('Invalid size hint value');
             }
             return {
