@@ -1,4 +1,4 @@
-# TailwindCSS Content Visibility Plugin
+# TailwindCSS content-visibility Plugin
 
 A lightweight Tailwind CSS plugin that adds utilities for managing content visibility (`content-visibility`) and intrinsic size hints (`contain-intrinsic-size`). Optimize rendering performance with flexible size hints using custom theme values.
 
