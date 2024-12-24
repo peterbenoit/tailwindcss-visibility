@@ -11,7 +11,7 @@ A lightweight Tailwind CSS plugin that adds utilities for managing content visib
 npm install tailwindcss-visibility
 ```
 
-## Setupp
+## Setup
 
 Add the plugin to your `tailwind.config.js`:
 
