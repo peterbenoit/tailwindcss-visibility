@@ -1,4 +1,4 @@
-import plugin from 'tailwindcss/plugin';
+const plugin = require('tailwindcss/plugin');
 
 /**
  * A Tailwind CSS plugin that provides utilities for controlling content visibility and size hints.
@@ -12,64 +12,40 @@ import plugin from 'tailwindcss/plugin';
  *
  * The plugin also provides a `sizeHint` theme option that can be used to configure the predefined size hint values.
  */
-const contentVisibilityPlugin = plugin(function ({ matchUtilities, addUtilities, theme }) {
-    // Arbitrary values, eg [500px]
-    matchUtilities({
-        'size-hint': (value) => {
-            // Validation for CSS length values, percents not allowed at the time this was created
-            if (!/^-?\d*\.?\d+(px|rem|em|vh|vw)$/.test(value)) {
-                throw new Error('Invalid size hint value');
-            }
-            return {
-                'contain-intrinsic-size': `0 ${value}`,
-            };
-        },
-    });
-
-    // Validate theme values
-    const validateSizes = (sizes) => {
-        Object.entries(sizes).forEach(([key, value]) => {
-            if (typeof value !== 'string') {
-                throw new Error(`Invalid size hint value for "${key}": must be a string`);
-            }
-        });
-        return sizes;
-    };
-
-    const defaultSizes = {
-        sm: '300px',
-        md: '500px',
-        lg: '800px',
-    };
-
-    // Get theme values and merge with defaults
-    const themeValues = theme('sizeHint', {});
-    const sizes = validateSizes({
-        ...defaultSizes,
-        ...themeValues,
-    });
-
-    // Create utilities using theme values
-    addUtilities({
-        '.content-auto': {
-            'content-visibility': 'auto',
-        },
-        '.content-hidden': {
-            'content-visibility': 'hidden',
-        },
-        '.content-visible': {
-            'content-visibility': 'visible',
-        },
-        ...Object.entries(sizes).reduce(
-            (acc, [key, value]) => ({
-                ...acc,
-                [`.size-hint-${key}`]: {
+const contentVisibilityPlugin = plugin(
+    function ({ matchUtilities, addUtilities, theme }) {
+        // Arbitrary values, eg [500px]
+        matchUtilities(
+            {
+                'size-hint': (value) => ({
                     'contain-intrinsic-size': `0 ${value}`,
-                },
-            }),
-            {}
-        ),
-    });
-});
+                }),
+            },
+            { values: theme('sizeHint') }
+        );
 
-export default contentVisibilityPlugin;
+        // Create utilities using theme values
+        addUtilities({
+            '.content-auto': {
+                'content-visibility': 'auto',
+            },
+            '.content-hidden': {
+                'content-visibility': 'hidden',
+            },
+            '.content-visible': {
+                'content-visibility': 'visible',
+            },
+        });
+    },
+    {
+        theme: {
+            sizeHint: {
+                sm: '300px',
+                md: '500px',
+                lg: '800px',
+            },
+        },
+    }
+);
+
+module.exports = contentVisibilityPlugin;

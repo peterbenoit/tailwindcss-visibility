@@ -4,7 +4,7 @@
     "description": "A lightweight Tailwind CSS plugin that adds utilities for managing content visibility (content-visibility) and intrinsic size hints (contain-intrinsic-size). Designed to improve rendering performance and provide flexible size hints using custom theme values.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"No tests specified\" && exit 0"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -26,6 +26,8 @@
     },
     "homepage": "https://tailwindcss-visibility.vercel.app/",
     "devDependencies": {
-        "tailwindcss": "^3.4.17"
+        "jest": "^30.3.0",
+        "postcss": "^8.5.8",
+        "tailwindcss": "^3.4.19"
     }
 }

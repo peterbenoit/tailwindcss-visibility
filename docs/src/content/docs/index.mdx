@@ -1,0 +1,36 @@
+---
+title: TailwindCSS content-visibility Plugin
+description: A lightweight Tailwind CSS plugin that adds utilities for managing content visibility (content-visibility) and intrinsic size hints (contain-intrinsic-size).
+template: splash
+hero:
+  tagline: Optimize rendering performance with flexible size hints using custom theme values.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: /guides/installation/
+      icon: right-arrow
+    - text: Github Repository
+      link: https://github.com/peterbenoit/tailwindcss-visibility
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Features
+
+<CardGrid stagger>
+	<Card title="content-visibility Classes" icon="setting">
+		Optimize rendering performance for long pages with multiple sections.
+	</Card>
+	<Card title="Intrinsic Size Hints" icon="add-document">
+		Prevent layout shifts in image galleries.
+	</Card>
+	<Card title="Custom Theme Values" icon="pencil">
+		Easily customize predefined size hints or use arbitrary values in your classes.
+	</Card>
+	<Card title="Performance" icon="rocket">
+		Reduces rendering time for off-screen content, improves paint and layout performance.
+	</Card>
+</CardGrid>
