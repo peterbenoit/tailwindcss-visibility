@@ -54,7 +54,7 @@ MIT License - see the [LICENSE](https://github.com/peterbenoit/tailwindcss-visib
 
 ## Author
 
-Peter Benoit - [@peterbenoit](https://github.com/peterbenoit)
+Peter Benoit - [@peterbenoit](https://www.peterbenoit.com)
 
 ## Related Projects
 
