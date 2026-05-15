@@ -24,7 +24,7 @@
 	"bugs": {
 		"url": "https://github.com/peterbenoit/tailwindcss-visibility/issues"
 	},
-	"homepage": "https://www.peterbenoit.com/tailwindcss-visibility/",
+	"homepage": "https://peterbenoit.com/tailwindcss-visibility/",
 	"devDependencies": {
 		"jest": "^30.3.0",
 		"postcss": "^8.5.8",
