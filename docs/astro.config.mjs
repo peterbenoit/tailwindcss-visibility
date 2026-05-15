@@ -10,6 +10,9 @@ export default defineConfig({
 		starlight({
 			title: 'TailwindCSS Visibility',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/peterbenoit/tailwindcss-visibility' }],
+			components: {
+				Footer: './src/components/Footer.astro',
+			},
 			sidebar: [
 				{
 					label: 'Guides',
