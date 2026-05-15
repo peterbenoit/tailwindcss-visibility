@@ -1,6 +1,6 @@
 {
 	"name": "tailwindcss-visibility",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A lightweight Tailwind CSS plugin that adds utilities for managing content visibility (content-visibility) and intrinsic size hints (contain-intrinsic-size). Designed to improve rendering performance and provide flexible size hints using custom theme values.",
 	"main": "index.js",
 	"scripts": {
